@@ -43,13 +43,19 @@ activities = {
         "description": "Train for friendly matches and learn team tactics",
         "schedule": "Tuesdays and Thursdays, 4:00 PM - 5:30 PM",
         "max_participants": 18,
-        "participants": []
+        "participants": [
+            {"email": "laura@mergington.edu", "name": "Laura Parker"},
+            {"email": "sam@mergington.edu", "name": "Samir Khan"}
+        ]
     },
     "Swimming Club": {
         "description": "Practice strokes, endurance, and water safety",
         "schedule": "Mondays and Wednesdays, 4:00 PM - 5:00 PM",
         "max_participants": 20,
-        "participants": []
+        "participants": [
+            {"email": "laura@mergington.edu", "name": "Laura Parker"},
+            {"email": "sam@mergington.edu", "name": "Samir Khan"}
+        ]
     },
     "Drama Club": {
         "description": "Rehearse scenes, develop acting skills, and stage performances",

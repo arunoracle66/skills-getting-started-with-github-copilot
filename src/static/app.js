@@ -24,12 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
           ? `<div class="participants">
                <h5>Participants</h5>
                <ul class="participants-list">
-                 ${details.participants.map(p => `
+                 ${details.participants.map(p => {
+                   const email = (typeof p === 'string') ? p : (p.email || '');
+                   const display = (typeof p === 'string') ? p : (p.name ? `${p.name} (${email})` : email);
+                   return `
                    <li class="participant-item">
-                     <span class="participant-email">${p}</span>
-                     <button type="button" class="participant-delete" data-activity="${name}" data-email="${p}" aria-label="Remove participant">🗑️</button>
+                     <span class="participant-email">${display}</span>
+                     <button type="button" class="participant-delete" data-activity="${name}" data-email="${email}" aria-label="Remove participant">🗑️</button>
                    </li>
-                 `).join("")}
+                 `}).join("")}
                </ul>
              </div>`
           : `<p class="no-participants">No participants yet</p>`;
